@@ -1,0 +1,4 @@
+# Ignorar configuraciones del entorno o credenciales de la base de datos
+config/conexion_local.php
+.env
+*.log
