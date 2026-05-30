@@ -80,9 +80,9 @@ CREATE TABLE `inscripcion` (
 CREATE TABLE `organizador` (
   `id_organizador` int(11) NOT NULL,
   `nombre` varchar(200) NOT NULL,
-  `Email` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
   `cedula` varchar(50) NOT NULL,
-  `password_hash` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `Fecha_registro` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -95,7 +95,7 @@ CREATE TABLE `organizador` (
 CREATE TABLE `voluntarios` (
   `id_voluntario` int(11) NOT NULL,
   `nombre` varchar(150) NOT NULL,
-  `password_hash` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email` varchar(150) NOT NULL,
   `cedula` varchar(20) NOT NULL,
   `fecha_registro` timestamp NOT NULL DEFAULT current_timestamp(),

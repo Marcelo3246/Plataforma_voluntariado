@@ -1,0 +1,87 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAFAFA;
+}
+
+header {
+    background-color: #c1e2b6; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+}
+
+.logo {
+    font-size: 24px;
+    color: #2D3748; 
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2D3748;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5A9E87; 
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+/* Estilos de la lista oculta */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #FFFFFF;
+    list-style: none;
+    padding: 10px 0;
+    margin: 10px 0 0 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 6px;
+    min-width: 180px; 
+    
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 100;
+}
+
+/* Estilos de los enlaces dentro de las categorías */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #4A5568;
+}
+
+/* Efecto hover dentro de las opciones de la lista */
+.dropdown-menu li a:hover {
+    background-color: #F7FAFC; /* Fondo sutil al pasar el mouse */
+    color: #5A9E87;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
