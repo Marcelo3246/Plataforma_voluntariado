@@ -85,3 +85,69 @@ header {
     visibility: visible;
     transform: translateY(0);
 }
+
+/* Estilos del login y registro unificado */
+body.login-page { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6fb; color: #2D3748; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+body.login-page .page { max-width: 520px; width: 100%; margin: 0; padding: 12px; }
+body.login-page .tabs { display: flex; gap: 10px; margin-bottom: 14px; }
+body.login-page .tab-button { flex: 1; padding: 8px 10px; border: 1px solid #bfcfc0; border-radius: 8px; background: #eaf3ea; color: #2D3748; cursor: pointer; font-size: 13px; transition: background .16s ease; }
+body.login-page .tab-button.active { background: #5A9E87; color: #ffffff; border-color: #4a8f6f; }
+body.login-page .form-panel { background: #ffffff; border: 1px solid #e2e8e6; border-radius: 12px; padding: 16px; box-shadow: 0 8px 20px rgba(20, 34, 85, 0.06); }
+body.login-page .form-panel h2 { margin-top: 0; font-size: 18px; }
+body.login-page label { display: block; margin: 10px 0 6px; font-weight: 600; color: #2D3748; }
+body.login-page input, body.login-page select { width: 100%; padding: 12px 14px; border: 1px solid #d1d8d3; border-radius: 10px; font-size: 14px; transition: border-color .16s ease, box-shadow .16s ease; }
+body.login-page input::placeholder { color: #9aa3a0; }
+body.login-page input:focus, body.login-page select:focus { border-color: #5A9E87; outline: none; box-shadow: 0 0 0 6px rgba(90, 158, 135, 0.08); }
+body.login-page button[type="submit"] { margin-top: 14px; width: 100%; padding: 10px 12px; border: none; border-radius: 10px; background: #5A9E87; color: #fff; font-size: 14px; cursor: pointer; }
+body.login-page button[type="submit"]:hover { background: #4a8f6f; }
+body.login-page .small-text { margin-top: 10px; color: #4a5568; font-size: 13px; }
+body.login-page .small-text button { background: none; border: none; color: #5A9E87; cursor: pointer; padding: 0; font-size: 13px; }
+body.login-page .hidden { display: none; }
+@media (min-width: 860px) { body.login-page .form-panel { padding: 18px; } }
+
+/* Evita que padding haga overflow en inputs y cajas */
+body.login-page, body.login-page * { box-sizing: border-box; }
+
+/* Ajustes visuales del header incluido en la página de login */
+body.login-page header { background-color: #c1e2b6; display: flex; justify-content: space-between; align-items: center; padding: 14px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-radius: 6px; margin-bottom: 18px; }
+body.login-page .logo { font-size: 20px; color: #2D3748; margin: 0; }
+body.login-page .nav-links { display: flex; gap: 18px; align-items: center; }
+body.login-page .nav-links a { color: #2D3748; text-decoration: none; font-weight: 500; }
+
+/* ── Mensajes flash (error / éxito) ─────────────────────────────────────────── */
+.alert {
+    padding: 11px 14px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.alert::before {
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.alert-error {
+    background-color: #fff1f1;
+    border: 1px solid #f5c2c2;
+    color: #a02020;
+}
+
+.alert-error::before {
+    content: "⚠️";
+}
+
+.alert-exito {
+    background-color: #f0faf3;
+    border: 1px solid #aadbc0;
+    color: #1e6e3f;
+}
+
+.alert-exito::before {
+    content: "✅";
+}
